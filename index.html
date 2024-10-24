@@ -3,101 +3,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Advanced portfolio with admin panel and game section">
-    <title>Advanced Portfolio - Your Name</title>
+    <meta name="description" content="Pirated Games Collection">
+    <title>Pirated Games Collection</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f9;
             margin: 0;
             padding: 0;
+            color: #333;
         }
         header {
-            background-color: #333;
+            background-color: #282c34;
             color: white;
-            padding: 1rem;
+            padding: 20px;
             text-align: center;
         }
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
         .container {
-            width: 80%;
-            margin: 0 auto;
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
         }
-        .portfolio-item, .game-item {
-            background-color: white;
-            margin: 20px 0;
+        .game-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .game-item {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
             padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
         }
-        .game-section {
-            margin-top: 50px;
+        .game-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
         }
-        .game-section h2 {
-            color: red;
+        .game-item h3 {
+            margin-bottom: 15px;
+            color: #333;
         }
-        .hidden {
-            display: none;
+        .game-item p {
+            color: #777;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+        .game-item button {
+            background-color: #61dafb;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .game-item button:hover {
+            background-color: #21a1f1;
         }
         footer {
             text-align: center;
-            padding: 1rem;
-            background-color: #333;
+            padding: 20px;
+            background-color: #282c34;
             color: white;
-            position: fixed;
-            width: 100%;
+            position: relative;
             bottom: 0;
+            width: 100%;
         }
     </style>
-    <script>
-        function showGames() {
-            var gamesSection = document.getElementById('game-section');
-            if (gamesSection.classList.contains('hidden')) {
-                gamesSection.classList.remove('hidden');
-            } else {
-                gamesSection.classList.add('hidden');
-            }
-        }
-    </script>
 </head>
 <body>
+
     <header>
-        <h1>Advanced Portfolio - Your Name</h1>
+        <h1>Pirated Games Collection</h1>
     </header>
 
     <div class="container">
-        <h2>My Projects</h2>
-        <div class="portfolio-item">
-            <h3>Project 1</h3>
-            <p>Description of Project 1.</p>
-            <a href="#" target="_blank">View on GitHub</a>
-        </div>
-        <div class="portfolio-item">
-            <h3>Project 2</h3>
-            <p>Description of Project 2.</p>
-            <a href="#" target="_blank">View on GitHub</a>
-        </div>
-
-        <button onclick="showGames()">Click here for Pirated Games</button>
-
-        <!-- Section for "pirated" games -->
-        <div id="game-section" class="game-section hidden">
-            <h2>Pirated Games Collection</h2>
+        <div class="game-grid">
+            <!-- Game 1 -->
             <div class="game-item">
-                <h3>Game 1: Super Pirate Adventure</h3>
-                <p>A highly popular pirated game. <a href="#">Download</a></p>
+                <h3>Super Pirate Adventure</h3>
+                <p>A thrilling pirate-themed platformer that challenges players with tricky levels and hidden treasures.</p>
+                <button onclick="window.location.href='https://example.com/game1'">Open Link</button>
             </div>
+            
+            <!-- Game 2 -->
             <div class="game-item">
-                <h3>Game 2: Pirate's Treasure Hunt</h3>
-                <p>An exciting quest for hidden treasures. <a href="#">Download</a></p>
+                <h3>Pirate's Treasure Hunt</h3>
+                <p>Embark on an epic quest to find the legendary treasure buried deep within the Lost Island.</p>
+                <button onclick="window.location.href='https://example.com/game2'">Open Link</button>
             </div>
+
+            <!-- Game 3 -->
             <div class="game-item">
-                <h3>Game 3: Pirate Racer</h3>
-                <p>Race against the clock and other pirates. <a href="#">Download</a></p>
+                <h3>Pirate Racer</h3>
+                <p>Race against fellow pirates in this action-packed, high-speed pirate racing game!</p>
+                <button onclick="window.location.href='https://example.com/game3'">Open Link</button>
+            </div>
+
+            <!-- Game 4 -->
+            <div class="game-item">
+                <h3>Pirate's War: The Final Battle</h3>
+                <p>Lead your pirate crew into a final battle to conquer the high seas and claim the ultimate victory.</p>
+                <button onclick="window.location.href='https://example.com/game4'">Open Link</button>
+            </div>
+
+            <!-- Game 5 -->
+            <div class="game-item">
+                <h3>Blackbeard's Revenge</h3>
+                <p>Take on the role of the notorious pirate Blackbeard and seek revenge on your enemies!</p>
+                <button onclick="window.location.href='https://example.com/game5'">Open Link</button>
+            </div>
+
+            <!-- Game 6 -->
+            <div class="game-item">
+                <h3>The Pirate King</h3>
+                <p>Fight your way to become the Pirate King in this action-packed naval combat game.</p>
+                <button onclick="window.location.href='https://example.com/game6'">Open Link</button>
+            </div>
+
+            <!-- Game 7 -->
+            <div class="game-item">
+                <h3>Captain Hook's Quest</h3>
+                <p>Join Captain Hook on a daring quest across the oceans to recover his stolen treasure.</p>
+                <button onclick="window.location.href='https://example.com/game7'">Open Link</button>
+            </div>
+
+            <!-- Game 8 -->
+            <div class="game-item">
+                <h3>Sea of Thieves: Rogue Edition</h3>
+                <p>A special rogue edition of the Sea of Thieves game featuring exclusive pirate battles.</p>
+                <button onclick="window.location.href='https://example.com/game8'">Open Link</button>
+            </div>
+
+            <!-- Game 9 -->
+            <div class="game-item">
+                <h3>Hidden Pirate Fortresses</h3>
+                <p>Explore hidden pirate fortresses scattered across the world, filled with treasures and enemies.</p>
+                <button onclick="window.location.href='https://example.com/game9'">Open Link</button>
+            </div>
+
+            <!-- Game 10 -->
+            <div class="game-item">
+                <h3>Pirate's Curse: The Forgotten Legacy</h3>
+                <p>Unravel the mystery behind the Pirate's Curse and reclaim the forgotten legacy of your ancestors.</p>
+                <button onclick="window.location.href='https://example.com/game10'">Open Link</button>
             </div>
         </div>
     </div>
 
     <footer>
-        <p>&copy; 2024 Your Name</p>
+        <p>&copy; 2024 Your Name - Pirated Games Collection</p>
     </footer>
+
 </body>
 </html>
+
