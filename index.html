@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Advanced portfolio with admin panel and game section">
+    <title>Advanced Portfolio - Your Name</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        .portfolio-item, .game-item {
+            background-color: white;
+            margin: 20px 0;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .game-section {
+            margin-top: 50px;
+        }
+        .game-section h2 {
+            color: red;
+        }
+        .hidden {
+            display: none;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #333;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+    <script>
+        function showGames() {
+            var gamesSection = document.getElementById('game-section');
+            if (gamesSection.classList.contains('hidden')) {
+                gamesSection.classList.remove('hidden');
+            } else {
+                gamesSection.classList.add('hidden');
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Advanced Portfolio - Your Name</h1>
+    </header>
+
+    <div class="container">
+        <h2>My Projects</h2>
+        <div class="portfolio-item">
+            <h3>Project 1</h3>
+            <p>Description of Project 1.</p>
+            <a href="#" target="_blank">View on GitHub</a>
+        </div>
+        <div class="portfolio-item">
+            <h3>Project 2</h3>
+            <p>Description of Project 2.</p>
+            <a href="#" target="_blank">View on GitHub</a>
+        </div>
+
+        <button onclick="showGames()">Click here for Pirated Games</button>
+
+        <!-- Section for "pirated" games -->
+        <div id="game-section" class="game-section hidden">
+            <h2>Pirated Games Collection</h2>
+            <div class="game-item">
+                <h3>Game 1: Super Pirate Adventure</h3>
+                <p>A highly popular pirated game. <a href="#">Download</a></p>
+            </div>
+            <div class="game-item">
+                <h3>Game 2: Pirate's Treasure Hunt</h3>
+                <p>An exciting quest for hidden treasures. <a href="#">Download</a></p>
+            </div>
+            <div class="game-item">
+                <h3>Game 3: Pirate Racer</h3>
+                <p>Race against the clock and other pirates. <a href="#">Download</a></p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Your Name</p>
+    </footer>
+</body>
+</html>
